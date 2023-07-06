@@ -20,7 +20,7 @@ let lightbox;
 function openImage(event) {
   event.preventDefault();
   if(event.target.tagName !== 'IMG') return;
-  lightbox = new SimpleLightbox('.gallery a');
+  lightbox = new SimpleLightbox('.gallery a', {captionsData: 'Alt', captionDelay: '250'});
   galleryContainer.removeEventListener('click', openImage);
 }
 
